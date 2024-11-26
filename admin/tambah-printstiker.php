@@ -4,36 +4,36 @@
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tambah Charger</title>
+    <title>Tambah Print Stiker</title>
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap"
+        rel="stylesheet" />
 
     <!-- Feather Icons -->
     <script src="https://unpkg.com/feather-icons"></script>
 
     <!-- css -->
     <!-- <link rel="stylesheet" href="admin.css" /> -->
-     <style>
-      <?php include "admin.css" ?>
+    <style>
+    <?php include "admin.css"?>
     </style>
-  </head>
-  <body>
+</head>
+
+<body>
 
     <!-- Tambah Case -->
-<section class="tambah-charger-section">
-  <div class="tambah-charger">
-    <div class="box" style="width: 60rem;">
-      <div class="form-box">
-        <?php
+    <section class="tambah-charger-section">
+        <div class="tambah-charger">
+            <div class="box" style="width: 60rem;">
+                <div class="form-box">
+                    <?php
           if (isset($_POST['submit'])) {
             $kategori = $_POST['kategori'];
             $nama = $_POST['nama'];
@@ -75,7 +75,7 @@
 
                                 if (mysqli_stmt_execute($stmt)) {
                                     echo "<div class='message-sukses'>
-                                            <p>Charger Berhasil Ditambah!</p>
+                                            <p>Print Stiker Berhasil Ditambah!</p>
                                           </div><br>";
                                     echo "<a href='index.php?type=produk'><button class='btn-kembali'>Kembali</button></a>";
                                 } else {
@@ -106,61 +106,64 @@
             }
         } else {
         ?>
-        <h2>Tambah Charger</h2>
-        <form action="" method="post" enctype="multipart/form-data">
-          <div class="item-form" style="display: flex; flex-wrap: wrap; gap: 1rem;">
-          <input type="hidden" name="kategori" id="kategori" value="charger"/>
-          <div class="form-input">
-            <label for="nama">Nama Produk</label>
-            <input type="text" name="nama" id="nama" required />
-          </div>
-          <div class="form-input">
-            <label for="harga">Harga</label>
-            <input type="text" id="harga" name="harga" required>
-          </div>
-          <div class="form-input">
-            <label for="stok">Stok</label>
-            <input type="text" name="stok" id="stok" required />
-          </div>
-          <div class="form-input">
-            <label for="bahan">Bahan</label>
-            <input type="text" name="bahan" id="bahan" required />
-          </div>
-          <div class="form-input">
-            <label for="model">Model</label>
-            <input type="text" name="model" id="model" required />
-          </div>
-          <div class="form-input">
-            <label for="berat">Berat</label>
-            <input type="text" name="berat" id="berat" required />
-          </div>
-          <div class="form-input">
-            <label for="stok">Deskripsi</label>
-            <textarea type="text" name="deskripsi" id="deskripsi" style="width: 26rem; height: 4rem; border: 1px solid #ccc;" required ></textarea>
-          </div>
-          <div class="form-input">
-            <label for="gambar">Gambar</label>
-            <input type="file" name="gambar" id="gambar" accept=".jpg, .jpeg, .png" required/>
-          </div>
-          </div>
-          <div class="button-submit">
-            <input type="submit" class="btn-tambah" name="submit" value="Tambah" />
-            <a href="index.php?type=produk"class="btn-kembali"><button type="button" class="btn-kembali-isi">Kembali</button></a>
-          </div>
-        </form>
-        <?php } ?>
-      </div>
-    </div>
-  </div>
-</section>
+                    <h2>Tambah Print Stiker</h2>
+                    <form action="" method="post" enctype="multipart/form-data">
+                        <div class="item-form" style="display: flex; flex-wrap: wrap; gap: 1rem;">
+                            <input type="hidden" name="kategori" id="kategori" value="charger" />
+                            <div class="form-input">
+                                <label for="nama">Nama Produk</label>
+                                <input type="text" name="nama" id="nama" required />
+                            </div>
+                            <div class="form-input">
+                                <label for="harga">Harga</label>
+                                <input type="text" id="harga" name="harga" required>
+                            </div>
+                            <div class="form-input">
+                                <label for="stok">Stok</label>
+                                <input type="text" name="stok" id="stok" required />
+                            </div>
+                            <div class="form-input">
+                                <label for="bahan">Bahan</label>
+                                <input type="text" name="bahan" id="bahan" required />
+                            </div>
+                            <div class="form-input">
+                                <label for="model">Model</label>
+                                <input type="text" name="model" id="model" required />
+                            </div>
+                            <div class="form-input">
+                                <label for="berat">Berat</label>
+                                <input type="text" name="berat" id="berat" required />
+                            </div>
+                            <div class="form-input">
+                                <label for="stok">Deskripsi</label>
+                                <textarea type="text" name="deskripsi" id="deskripsi"
+                                    style="width: 26rem; height: 4rem; border: 1px solid #ccc;" required></textarea>
+                            </div>
+                            <div class="form-input">
+                                <label for="gambar">Gambar</label>
+                                <input type="file" name="gambar" id="gambar" accept=".jpg, .jpeg, .png" required />
+                            </div>
+                        </div>
+                        <div class="button-submit">
+                            <input type="submit" class="btn-tambah" name="submit" value="Tambah" />
+                            <a href="index.php?type=produk" class="btn-kembali"><button type="button"
+                                    class="btn-kembali-isi">Kembali</button></a>
+                        </div>
+                    </form>
+                    <?php } ?>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
     <!-- Feather Icons -->
     <script>
-      feather.replace();
+    feather.replace();
     </script>
 
     <!-- javaScript -->
     <script src="admin.js"></script>
-  </body>
+</body>
+
 </html>

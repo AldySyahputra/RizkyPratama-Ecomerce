@@ -16,7 +16,7 @@
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   background-color: var(--bg);
   color: #fff;
 }
@@ -32,6 +32,24 @@ body {
   padding: 6px 14px;
   z-index: 99;
   transition: all 0.5s ease;
+  overflow-y: auto;
+}
+
+.sidebar::-webkit-scrollbar {
+  width: 5px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: #11101d;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 10px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background: #666;
 }
 
 .sidebar .logo-details {
@@ -418,8 +436,7 @@ body {
   flex-direction: column;
   padding: 2rem 3rem;
   border-radius: 1.5rem;
-  box-shadow: 0 0 128px 0 rgba(1, 1, 1, 0.4),
-    0 32px 64px -48px rgba(1, 1, 1, 0.8);
+  box-shadow: 0 0 128px 0 rgba(1, 1, 1, 0.4), 0 32px 64px -48px rgba(1, 1, 1, 0.8);
 }
 
 .edit-user-section .edit-user .box h2,
@@ -639,4 +656,50 @@ body {
   .tentang .tentang-box .tentang-item img {
     padding: 24px 0 24px;
   }
+}
+
+.sidebar .nav-list .prod-btn {
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+  padding: 0;
+}
+
+.sidebar .nav-list .prod-show {
+  background: #1d1b31;
+  display: none;
+  padding-left: 0;
+}
+
+.sidebar .nav-list .prod-show.show {
+  display: block;
+}
+
+.sidebar .nav-list .prod-show li {
+  line-height: 42px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  list-style: none;
+}
+
+.sidebar .nav-list .prod-show li a {
+  font-size: 15px;
+  padding-left: 40px;
+  font-weight: 400;
+  height: 100%;
+  border-left: 3px solid transparent;
+  width: 100%;
+  display: block;
+}
+
+.sidebar .nav-list .prod-show li a:hover {
+  background: #fff;
+}
+
+.arrow {
+  transition: all 0.3s ease;
+  font-size: 20px !important;
+}
+
+.arrow.rotate {
+  transform: rotate(-180deg);
 }
